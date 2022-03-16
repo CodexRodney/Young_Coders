@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int youngest_age(int group[])
+{
+	int i;
+	int temp=group[0];
+	for (i=0;i<5;i++)
+	{
+		if(temp>group[i]){
+			temp=group[i];
+		}
+	}
+	return temp;
+}
+int main()
+{
+	int group[5];
+	int initial_ticket_price=10;
+	float final_ticket_price;
+	float discount;
+	cout<<"Enter the ages of the 5 group members"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		cin>>group[i];
+	}
+	int youngest=youngest_age(group);
+	cout<<"the youngest age is:"<<youngest<<endl;
+	discount=float(youngest*50)/100;
+	final_ticket_price=initial_ticket_price*5 - discount;
+	cout<<"Your discount is:"<<discount<<endl;
+	cout<<"Your ticket price is:"<<final_ticket_price<<endl;
+	return 0;
+}
