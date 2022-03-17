@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	string s;
+	cout<<"Enter a string of words: "<<endl;
+    getline	(cin,s);
+	for(int j=0;j<s.length();j++){
+		char f=s[j];
+		if(s[j]=='1'&&s[j++]=='0'){
+			s.replace(j,2,"ten");
+		}else if(f=='0')
+		{s.replace(j,1,"zero");}
+		else if(f=='1')
+		{s.replace(j,1,"one");}
+		else if(f=='2')
+		{s.replace(j,1,"two");}
+		else if(f=='3')
+		{s.replace(j,1,"three");}
+		else if(f=='4')
+		{s.replace(j,1,"four");}
+		else if(f=='5')
+		{s.replace(j,1,"five");}
+		else if(f=='6')
+		{s.replace(j,1,"six");}
+		else if(f=='7')
+		{s.replace(j,1,"seven");}
+		else if(f=='8')
+		{s.replace(j,1,"eight");}
+		else if(f=='9')
+		{s.replace(j,1,"nine");}
+		
+	}
+	cout<<s;
+	return 0;
+}
