@@ -31,10 +31,10 @@ jobs:
           name: Install Ansible
           command: |
             python3 -m pip3 install ansible
-      # - run:
-      #     name: Run Playbook and Configure server
-      #     command: |
-      #       ansible-playbook -i invertory main-remote.yml
+      - run:
+          name: Run Playbook and Configure server
+          command: |
+            ansible-playbook -i invertory main-remote.yml
 # Sequential workflow
 workflows:
   # Name the workflow
