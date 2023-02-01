@@ -21,7 +21,7 @@ jobs:
   
   configure_infrastructure: 
     docker:
-      - image: python:3.7-alphine3.11
+      - image: python:3.7-alpine3.11
     steps:
       - checkout
       - add_ssh_keys:
@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            ansible-playbook -i invertory main-remote.yml
+            ansible-playbook -i invertory main-remote.yml < yes
 # Sequential workflow
 workflows:
   # Name the workflow
