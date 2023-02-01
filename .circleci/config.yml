@@ -21,18 +21,12 @@ jobs:
   
   configure_infrastructure: 
     docker:
-      - image: cimg/python:3.10
+      - image: python:3.7-alphine3.11
     steps:
       - checkout
       - add_ssh_keys:
               # You can get this ID in the section where you registered the SSH Key
               fingerprints: ["52:9c:ff:5f:02:f3:c2:35:78:d6:c7:0a:d8:19:c5:ca"]
-      - run:
-          name: Install pip 3
-          command: |
-            sudo apt-get update
-            sudo apt-get -y install python3-pip
-            pip3 --version
       - run:
           name: Install Ansible
           command: |
